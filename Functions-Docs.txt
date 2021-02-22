@@ -1,0 +1,6 @@
+=============================
+==== Functions Document ====
+=============================
+
+getAllFrom($faild, $table, $where = Null, and = NULL, $orderfaild, $ordering = 'DESC');
+
