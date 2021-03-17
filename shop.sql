@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 22, 2021 at 12:50 PM
+-- Generation Time: Mar 17, 2021 at 04:52 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -119,7 +119,8 @@ INSERT INTO `items` (`Item_ID`, `Name`, `Description`, `Price`, `Add_Date`, `Cou
 (29, 'My Item', 'This Is Description For My Item', '45', '2020-12-14', 'china', '0', '2', 0, 1, 16, 25, 'Test,Elzero,Discount'),
 (30, 'Wooden Game', 'New PS4 Game', '44', '2020-12-16', 'sudan', '0', '1', 0, 1, 13, 28, 'Elzero,Hand,Discount,Gurantee'),
 (32, 'Daiblo III', 'New PS4 Game', '70', '2020-12-16', 'USA', '0', '1', 0, 1, 14, 25, 'RPG,Online,Game'),
-(33, 'Super Hero', 'New PS4 Game', '90', '2020-12-17', 'Eroup', '0', '3', 0, 1, 14, 25, 'RPG,Online,Game');
+(33, 'Super Hero', 'New PS4 Game', '90', '2020-12-17', 'Eroup', '0', '3', 0, 1, 14, 25, 'RPG,Online,Game'),
+(34, 'Iphone 6s', 'a good phone ', '34', '2021-03-08', 'eroup', '0', '3', 0, 0, 15, 25, '');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ CREATE TABLE `users` (
   `TrustStatus` int(11) NOT NULL DEFAULT 0,
   `RegStatus` int(11) NOT NULL DEFAULT 0,
   `Date` date NOT NULL,
-  `avatar` varchar(255) NOT NULL
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -154,7 +155,8 @@ INSERT INTO `users` (`UserID`, `Username`, `Password`, `Email`, `FullName`, `Gro
 (26, 'mona', '63ab910cb3a7bc89faae5a46aa337aa22f5f4d30', 'gh@gmail.com', NULL, 0, 0, 1, '2020-11-27', ''),
 (27, 'ahmed', 'f2231d2871e690a2995704f7a297bd7bc64be720', 'gjgh@gmail.com', NULL, 0, 0, 1, '2020-11-27', ''),
 (28, 'faisal', '63ab910cb3a7bc89faae5a46aa337aa22f5f4d30', 'fff@gmail.com', ' faisal faisal ', 0, 0, 1, '2020-12-15', ''),
-(29, 'maghdd', 'bf9c01699b0ef9ea9d7287126c20b8ce52836021', 'jdjdj@gmail.com', 'mohamd maiadd', 0, 0, 1, '2020-12-17', '58551_a12cf6b870ec453bb26de6a750ffe1d9.jpg');
+(29, 'maghdd', 'bf9c01699b0ef9ea9d7287126c20b8ce52836021', 'jdjdj@gmail.com', 'mohamd maiadd', 0, 0, 1, '2020-12-17', '58551_a12cf6b870ec453bb26de6a750ffe1d9.jpg'),
+(30, 'aliss', '12d860be3734010a62e9b1015e75471d61dbceb5', 'aki@gmail.com', NULL, 0, 0, 0, '2021-02-22', NULL);
 
 --
 -- Indexes for dumped tables
@@ -210,13 +212,13 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
